@@ -10,7 +10,7 @@ const config = {
   projectName: 'eyesdk',
   appId: '123456',
   userId: '123456',
-  isImageUpload: false,
+  isImageUpload: false, // 是否选择图片上传
   batchSize: 5,
 }
 export function setConfig(options) {

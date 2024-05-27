@@ -26,7 +26,7 @@ export function install(Vue, options) {
       startTime: window.performance.now(), //高精度时间戳测量短时间间隔的精确时间。
       pageUrl: window.localtion.href,
     }
-
+    lazyReportBatch(reportData)
     if (handler) {
       handler.call(this, err, vm, info)
     }
@@ -46,7 +46,8 @@ export function errorBoundary(err, info) {
     startTime: window.performance.now(), //高精度时间戳测量短时间间隔的精确时间。
     pageUrl: window.localtion.href,
   }
-  //上报数据错误信息TDDO
+  //上报数据错误信息T
+  lazyReportBatch(reportData)
 }
 
 export function init(options) {
