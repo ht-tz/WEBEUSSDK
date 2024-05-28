@@ -3,7 +3,7 @@
  * @Date: 2024-05-25 22:42:56
  * @LastEditors:
  * @LastEditTime: 2024-05-27 18:11:03
- * @Description: 请填写简介
+ * @Description: ajax请求
  */
 export const originalPhoto = XMLHttpRequest.prototype
 

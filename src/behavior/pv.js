@@ -7,6 +7,7 @@
  */
 
 import { lazyReportBatch } from '../report'
+import { generateUniqueId } from '../utils'
 
 /**
  * @description pv数据统计

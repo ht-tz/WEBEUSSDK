@@ -2,10 +2,10 @@
  * @Author: htz
  * @Date: 2024-05-26 17:03:25
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-27 16:56:17
+ * @LastEditTime: 2024-05-27 21:51:55
  * @Description: 页面错误捕获
  */
-import { report } from '../report'
+import { lazyReportBatch } from '../report'
 
 export default function error() {
   // 捕获资源加载失败的错误的：js css img
@@ -32,7 +32,7 @@ export default function error() {
   )
 
   //捕获js错误
-  window.onerror = function (message, source, lineno, colno, error) {
+  window.onerror = function (message, url, lineno, colno, error) {
     const reportData = {
       type: 'error',
       subType: 'js',

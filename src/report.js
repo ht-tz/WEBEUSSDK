@@ -2,7 +2,7 @@
  * @Author: htz
  * @Date: 2024-05-25 22:31:48
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-27 18:14:05
+ * @LastEditTime: 2024-05-28 22:05:31
  * @Description: 数据上报
  */
 import { getCache, setCache, clearCache } from './cache'
@@ -57,8 +57,8 @@ export function imgReport(data) {
  */
 export function lazyReportBatch(data) {
   setCache(data)
-  const dataCache = getCache
-  console.log('img', dataCache, 'dataCache')
+  const dataCache = getCache()
+  console.error(dataCache, 'dataCache')
 
   if (dataCache.length && dataCache.length > config.batchSize) {
     report(dataCache)
@@ -73,7 +73,7 @@ export function xhrReport(data) {
     window.requestIdleCallback(
       () => {
         const xhr = new XMLHttpRequest()
-        originalOpen.call(xhr, 'POST', config.url)
+        originalOpen.call(xhr, 'post', config.url)
         originalSend.call(xhr, JSON.stringify(data))
       },
       {
@@ -83,7 +83,7 @@ export function xhrReport(data) {
   } else {
     setTimeout(() => {
       const xhr = new XMLHttpRequest()
-      originalOpen.call(xhr, 'POST', config.url)
+      originalOpen.call(xhr, 'post', config.url)
       originalSend.call(xhr, JSON.stringify(data))
     })
   }

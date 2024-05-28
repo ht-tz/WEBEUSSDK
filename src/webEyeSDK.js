@@ -24,7 +24,7 @@ export function install(Vue, options) {
       subType: 'vue',
       type: 'error',
       startTime: window.performance.now(), //高精度时间戳测量短时间间隔的精确时间。
-      pageUrl: window.localtion.href,
+      pageUrl: window.location.href,
     }
     lazyReportBatch(reportData)
     if (handler) {
@@ -44,7 +44,7 @@ export function errorBoundary(err, info) {
     subType: 'react',
     type: 'error',
     startTime: window.performance.now(), //高精度时间戳测量短时间间隔的精确时间。
-    pageUrl: window.localtion.href,
+    pageUrl: window.location.href,
   }
   //上报数据错误信息T
   lazyReportBatch(reportData)
@@ -52,6 +52,9 @@ export function errorBoundary(err, info) {
 
 export function init(options) {
   setConfig(options)
+  // behavior()
+  // performance()
+  install()
 }
 
 export default {

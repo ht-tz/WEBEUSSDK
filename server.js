@@ -2,7 +2,7 @@
  * @Author: htz
  * @Date: 2024-05-25 22:06:31
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-27 16:23:24
+ * @LastEditTime: 2024-05-27 22:24:27
  * @Description:  服务端
  */
 
@@ -19,7 +19,7 @@ app.use(bodyParse.json())
 // 解析text/plain数据
 app.use(bodyParse.text())
 
-app.post('reportData', (req, res) => {
+app.post('/reportData', (req, res) => {
   console.log(req.body)
   res.status(200).send('ok')
 })

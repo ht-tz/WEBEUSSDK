@@ -1,5 +1,12 @@
+/*
+ * @Author: htz
+ * @Date: 2024-05-25 22:33:56
+ * @LastEditors:
+ * @LastEditTime: 2024-05-28 12:33:56
+ * @Description: 请填写简介
+ */
 import { lazyReportBatch } from '../report'
-export default function observerLCP() {
+export default function observeLCP() {
   const entryHandler = (list) => {
     if (observer) {
       observer.disconnect()

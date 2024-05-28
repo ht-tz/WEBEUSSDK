@@ -1,5 +1,12 @@
+/*
+ * @Author: htz
+ * @Date: 2024-05-25 22:42:25
+ * @LastEditors:
+ * @LastEditTime: 2024-05-28 12:34:10
+ * @Description: 请填写简介
+ */
 import { lazyReportBatch } from '../report'
-export default function observerPaint() {
+export default function observePaint() {
   const entryHandler = (list) => {
     for (const entry of list.getEntries()) {
       if (entry.name === 'first-paint') {

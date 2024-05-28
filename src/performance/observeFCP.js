@@ -2,12 +2,12 @@
  * @Author: htz
  * @Date: 2024-05-25 22:34:27
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-27 18:10:13
+ * @LastEditTime: 2024-05-28 13:32:51
  * @Description:  FCP绘制时间统计统计
  */
 
 import { lazyReportBatch } from '../report'
-export default function observePaint() {
+export default function observeFCP() {
   const entryhandler = (list) => {
     for (const entry of list.getEntries()) {
       if (entry.name === 'first-contentful-paint') {
@@ -30,5 +30,5 @@ export default function observePaint() {
   // 统计和计算fp时间
   const observer = new PerformanceObserver(entryhandler)
   //buffer:true 确保观察到所有的paint事件
-  observer.observe({ type: 'paintt', buffered: true })
+  observer.observe({ type: 'paint', buffered: true })
 }

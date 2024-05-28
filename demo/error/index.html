@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../dist/monitor.js"></script>
+</head>
+
+<body>
+    <script>
+
+        monitor.init({
+            url: "http://localhost:9000/reportData"
+        })
+
+    </script>
+    <img src="http://www.toutiao.com/x21.png" alt="">
+    <img src="http://www.toutiao.com/x2122.png" alt="">
+    <img src="http://www.toutiao.com/x126.png" alt="">
+    <img src="http://www.toutiao.com/323.png" alt="">
+    <img src="http://www.toutiao.com/x11312126.png" alt="">
+
+
+    <script>
+        function test() {
+            return Promise.reject(Error("promise"))
+        }
+
+        function test2() {
+            return Promsie.reject(Error("promise2"))
+        }
+
+        function test3() {
+            return Promsie.reject(Error("promise3"))
+        }
+
+        test()
+        test3()
+        test2()
+    </script>
+</body>
+
+</html>
