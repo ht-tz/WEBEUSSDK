@@ -2,7 +2,7 @@
  * @Author: htz
  * @Date: 2024-04-24 08:24:23
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-27 10:17:23
+ * @LastEditTime: 2024-05-28 23:27:38
  * @Description:SDk上报传递一些参数
  */
 const config = {

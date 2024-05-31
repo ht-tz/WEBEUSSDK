@@ -1,3 +1,10 @@
+/*
+ * @Author: htz
+ * @Date: 2024-05-25 22:32:30
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-05-31 18:14:48
+//  * @Description: 请填写简介
+ */
 import performance from './performance/index'
 import error from './error/index'
 import behavior from './behavior/index'
@@ -38,7 +45,7 @@ export function errorBoundary(err, info) {
   if (__webEyeSDK__.react) return
   __webEyeSDK__.react = true
   // 上报错误信息
-  reportData = {
+  const reportData = {
     error: err?.stack,
     info,
     subType: 'react',
@@ -53,8 +60,9 @@ export function errorBoundary(err, info) {
 export function init(options) {
   setConfig(options)
   // behavior()
-  // performance()
-  install()
+  // errorBoundary()
+  performance()
+  // install()
 }
 
 export default {

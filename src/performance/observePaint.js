@@ -1,9 +1,9 @@
 /*
  * @Author: htz
  * @Date: 2024-05-25 22:42:25
- * @LastEditors:
- * @LastEditTime: 2024-05-28 12:34:10
- * @Description: 请填写简介
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-05-31 17:22:16
+ * @Description: 首次绘制DFP
  */
 import { lazyReportBatch } from '../report'
 export default function observePaint() {
